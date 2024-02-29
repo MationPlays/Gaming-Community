@@ -108,7 +108,7 @@ function App() {
     <div id='mesg1' className={`message ${msg.data.uid === user.uid ? 'current' : 'other'}`}>
       <img id='pic' src={msg.data.photoURL} alt="User" />
       <div>
-        <b>{user.displayName}</b>{" "}
+        <b>{msg.data.displayName}</b>{" "}
         <div id='time'>{msg.data.timestamp ? new Date((msg.data.timestamp.seconds) * 1000).toLocaleDateString("de-DE") : null}</div>{" "}
         <div id='time'>{msg.data.timestamp ? new Date((msg.data.timestamp.seconds) * 1000).toLocaleTimeString("de-DE", { hour: '2-digit', minute: '2-digit' }) : null}</div>
       </div>
